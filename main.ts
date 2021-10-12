@@ -19,9 +19,11 @@ radio.onReceivedValue(function (name, value) {
         bitbot.rotatems(BBRobotDirection.Right, 60, value)
     } else {
         basic.showIcon(IconNames.No)
+        bitbot.setLedColor(0xFF0000)
     }
     basic.pause(2000)
     basic.showIcon(IconNames.Happy)
+    bitbot.ledRainbow()
 })
 bitbot.select_model(BBModel.Classic)
 radio.setGroup(99)
@@ -32,6 +34,7 @@ basic.showLeds(`
     # # . . .
     # . # . .
     `)
+bitbot.ledRainbow()
 basic.forever(function () {
 	
 })
