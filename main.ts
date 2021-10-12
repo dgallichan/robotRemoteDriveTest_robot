@@ -1,5 +1,6 @@
 radio.onReceivedValue(function (name, value) {
     if (name == "Go") {
+        bitbot.setLedColor(0x40C0FF)
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -9,6 +10,7 @@ radio.onReceivedValue(function (name, value) {
             `)
         bitbot.goms(BBDirection.Forward, 30, value)
     } else if (name == "Rotate") {
+        bitbot.setLedColor(0x40C0FF)
         basic.showLeds(`
             . . # . .
             # # # # .
@@ -23,7 +25,7 @@ radio.onReceivedValue(function (name, value) {
     }
     basic.pause(500)
     basic.showIcon(IconNames.Happy)
-    bitbot.ledRainbow()
+    bitbot.setLedColor(0x659900)
 })
 bitbot.select_model(BBModel.Classic)
 radio.setGroup(99)
@@ -34,7 +36,8 @@ basic.showLeds(`
     # # . . .
     # . # . .
     `)
-bitbot.ledRainbow()
+bitbot.setLedColor(0x659900)
+bitbot.ledBrightness(40)
 basic.forever(function () {
 	
 })
