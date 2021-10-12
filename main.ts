@@ -22,9 +22,15 @@ radio.onReceivedValue(function (name, value) {
     } else {
         basic.showIcon(IconNames.No)
         bitbot.setLedColor(0xFF0000)
+        basic.pause(500)
     }
-    basic.pause(500)
-    basic.showIcon(IconNames.Happy)
+    basic.showLeds(`
+        # # # . .
+        # . # . .
+        # # . . .
+        # # . . .
+        # . # . .
+        `)
     bitbot.setLedColor(0x659900)
 })
 bitbot.select_model(BBModel.Classic)
