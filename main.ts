@@ -21,7 +21,7 @@ radio.onReceivedValue(function (name, value) {
         basic.showIcon(IconNames.No)
         bitbot.setLedColor(0xFF0000)
     }
-    basic.pause(2000)
+    basic.pause(500)
     basic.showIcon(IconNames.Happy)
     bitbot.ledRainbow()
 })
