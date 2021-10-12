@@ -1,13 +1,13 @@
 radio.onReceivedValue(function (name, value) {
     if (name == "Go") {
         basic.showLeds(`
-            # # # # .
-            # . . . .
-            # . # # #
-            # . . # .
-            # # # # .
+            . . # . .
+            . # # # .
+            # # # # #
+            . . # . .
+            . . # . .
             `)
-        bitbot.goms(BBDirection.Forward, 60, value)
+        bitbot.goms(BBDirection.Forward, 30, value)
     } else if (name == "Rotate") {
         basic.showLeds(`
             . . # . .
@@ -16,7 +16,7 @@ radio.onReceivedValue(function (name, value) {
             # . . . .
             # # # # #
             `)
-        bitbot.rotatems(BBRobotDirection.Right, 60, value)
+        bitbot.rotatems(BBRobotDirection.Right, 30, value)
     } else {
         basic.showIcon(IconNames.No)
         bitbot.setLedColor(0xFF0000)
